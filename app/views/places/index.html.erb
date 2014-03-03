@@ -1,0 +1,78 @@
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#"><i id="icon-home2" class="icon-home"></i> Panel de control</a>
+                    <div class="nav-collapse collapse">
+                        <label>Usuario logueado: juan_pablo <%=link_to 'Cerrar sesión', root_url %> </label>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <div class="hero-unit29">
+
+                <h3 id="register">Administración</h3>
+
+                  <div class="input-prepend">
+
+                    <table class="table">
+                      <thead>
+                        <tr><td>Controladores</td><td>Estado</td><td>N°</td><td>Acción</td></tr>
+                      </thead>
+
+                      <tbody>
+                        <% @places.each do |place| %>
+                          <tr>
+                            <td><%= link_to place.name, place %></td>
+                            <td><%= place.state %></td>
+                            <td><%= place.number_interface %></td>
+                            <td><%= link_to 'Editar', edit_place_path(place) %></td>
+                            <td><%= link_to 'Eliminar', place, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+                          </tr>
+                        <% end %>
+                      </tbody>
+                    </table>
+
+                    <h6><%= link_to 'Nuevo', new_place_path %></h6>
+          </div>
+
+
+        </div>
+            <div class="row">
+
+            <div class="navbar navbar-fixed-bottom">
+                <div id="footer2"><a id="textoFooter">&copy; Panel de administración general.</a></div>
+            </div>
+
+
+        </div> <!-- /container -->
+        <style type="text/css">
+
+            .hero-unit29{
+                margin-left: 20%;
+                height: 400px;
+                width: 50%;
+                }
+            .nav-collapse {
+                margin-left: 75%;
+            }
+
+            .table{
+                color: white;
+                font-size: 20px;
+                font-family: Kristen ITC;
+            }
+            a{
+              color:white;
+            }
+            body{
+              background-image: none;
+            }
+        </style>
+
+
+
+

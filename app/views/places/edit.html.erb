@@ -1,0 +1,43 @@
+  <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#"><i id="icon-home2" class="icon-home"></i> Panel de control</a>
+                    <div class="nav-collapse collapse">
+                        <label>Usuario logueado: juan_pablo <%=link_to 'Cerrar sesión', root_url %> </label>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="hero-unit29">
+
+                <h3 id="register">Editar dispositivo</h3>
+
+                  <%= render 'form' %>
+
+                  <%= link_to 'Detalle', @place %> |
+                  <%= link_to 'Volver', places_path %>
+
+        </div>
+            <div class="row">
+
+            <div class="navbar navbar-fixed-bottom">
+                <div id="footer2"><a id="textoFooter">&copy; Panel de administración general.</a></div>
+            </div>
+
+<style type="text/css">
+    body{
+        background-image: none;
+    }
+    .hero-unit29{
+                margin-left: 35%;
+                height: 250px;
+                width: 25%;
+                }
+            .nav-collapse {
+                margin-left: 75%;
+            }
+</style>
+        </div> <!-- /container -->

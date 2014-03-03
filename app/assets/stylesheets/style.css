@@ -1,0 +1,42 @@
+      body{
+        background-repeat: no-repeat;
+        background-image: url(4.jpg);
+      }
+      #register{
+        color: #dfb7a1;
+      }
+
+      #icon-home2{
+        background-color: white;
+      }
+
+      #footer2{
+        height: 50px;
+        background-color: black;
+      }
+
+      label{
+        font-family: Kristen ITC;
+        color:white;
+      }
+
+      #textoFooter{
+        margin-left: 35%;
+        font-size: 1.1em;
+        font-family: Kristen ITC;
+        color: white;
+        text-decoration: none;
+      }
+
+      .hero-unit29{
+        background-color: black;
+        opacity: 0.9;
+        width: 30%;
+        border-radius: 8px 8px 8px 8px;
+        margin-top: 10%;
+        margin-left: 85%;
+      }
+
+      .navbar-form{
+        margin-left: 5%;
+      }

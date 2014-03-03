@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#"><i id="icon-home2" class="icon-home"></i> Panel de control</a>
+                    <div class="nav-collapse collapse">
+                        <label>Usuario logueado: juan_pablo <%=link_to 'Cerrar sesión', root_url %> </label>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero-unit29">
+                <h3 id="register">Estado de dispositivo</h3>
+                  <div class="input-prepend">
+                    <table class="table">
+                        <tr><td>Nombre: <%= notice %> </td></tr>
+                        <tr><td>Nombre: <%= debug @place %> </td></tr>
+                        <tr><td>Nombre: <%= @place.name %> </td></tr>
+                        <tr><td></td></tr>
+                        <tr><td>Estado: <%= @place.state %> </td></tr>
+                        <tr><td>  </td></tr>
+                        <tr><td class="span6">Número de interface: <%=@place.number_interface %> </td></tr>
+                        <tr><td></td></tr>
+                    </table>
+
+                    <%= link_to switch_state_place_path(@place) do %>
+                      <%=image_tag("off.jpg", width: "70")%>
+                    <%end %>
+
+                    <h6><%= link_to 'Editar', edit_place_path(@place) %> |
+                    <%= link_to 'Volver', places_path %></h6>
+          </div>
+        </div>
+            <div class="row">
+
+            <div class="navbar navbar-fixed-bottom">
+                <div id="footer2"><a id="textoFooter">&copy; Panel de administración general.</a></div>
+            </div>
+        </div> <!-- /container -->
+        <style type="text/css">
+            .hero-unit29{
+                margin-left: 20%;
+                height: 340px;
+                width: 50%;
+                }
+            .nav-collapse {
+                margin-left: 75%;
+            }
+            .table{
+                color: white;
+                font-size: 20px;
+                font-family: Kristen ITC;
+            }
+            body{
+                background-image: none;
+            }
+        </style>

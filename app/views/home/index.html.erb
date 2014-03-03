@@ -1,0 +1,48 @@
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#"><i id="icon-home2" class="icon-home"></i> Ingreso</a>
+                    <div class="nav-collapse collapse">
+
+                <%= form_tag sessions_path, class: "navbar-form pull-right" do %>
+                  <%= text_field_tag 'name',nil, class: "span2", :placeholder =>"Usuario" %>
+                  <%= password_field_tag 'password',nil, class: "span2", :placeholder =>"Contraseña" %>
+                  <%= submit_tag 'Entrar', class:"btn" %>
+                <% end %>
+
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero-unit29">
+                <h3 id="register">Regístrese</h3>
+
+                <%= form_for([@user], html: {class: "navbar-form"}) do |f| %>
+                    <h5><%= @user.errors.full_messages[0] %></h5>
+                    <div class="input-prepend">
+                        <%= f.label :name, "Nombre: " %>
+                        <span class="add-on"><i class="icon-envelope"></i></span>
+                        <%= f.text_field :name %>
+                        <%= f.label :password, "Contraseña: " %>
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <%= f.text_field :password, type:"password" %>
+                        <%= f.label :password_confirmation, "Confirme contraseña: " %>
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <%= f.text_field :password_confirmation, type:"password" %>
+                        </br></br>
+                        <span class="add-on"><i class="icon-thumbs-up"></i></span>
+                        <%= f.submit 'Registrarme', class: "btn btn-primary" %>
+                    </div>
+                <% end %>
+
+            </div>
+        </div>
+            <div class="row">
+<div id="contenedor">
+</div>
+            <div class="navbar navbar-fixed-bottom">
+                <div id="footer2"><a id="textoFooter">&copy; INGRESO AL PANEL DE ADMINISTRACIÓN.</a></div>
+            </div>
+        </div> <!-- /container -->
